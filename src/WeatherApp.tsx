@@ -19,7 +19,9 @@ const WeatherApp = () => {
 
   return (
     <div id="weatherApp" role="main">
-      <h3>App</h3>
+      <header role="heading" id="header">
+        <input type="search" role="searchbox" id="searchBox" placeholder="e.g. London" />
+      </header>
     </div>
 
   );

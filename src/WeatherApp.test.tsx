@@ -14,6 +14,24 @@ describe('WeatherApp', () => {
       expect(mainElement).toBeInTheDocument();
     });
   });
+
+  it('should render header', async () => {
+    const view = render(<WeatherApp />);
+
+    const header = getById(view.container, 'header');
+    await waitFor(() => {
+      expect(header).toBeInTheDocument();
+    });
+  });
+
+  it('should render search box', async () => {
+    const view = render(<WeatherApp />);
+
+    const search = getById(view.container, 'searchBox');
+    await waitFor(() => {
+      expect(search).toBeInTheDocument();
+    });
+  });
 });
 
 

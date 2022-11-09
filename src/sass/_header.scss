@@ -1,0 +1,28 @@
+header#header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+
+  background-color: rgba(20,20,20,0.2);
+
+  input#searchBox {
+    transition: all 0.25s;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    width: 90%;
+    max-width: 18.75rem;
+
+    border-radius: 0.25rem;
+
+    opacity: 0.35;
+
+    &:focus {
+      opacity: 1;
+      padding: 0.6rem 0.85rem;
+    }
+  }
+}
