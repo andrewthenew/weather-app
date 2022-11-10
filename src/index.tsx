@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './sass/app.scss'
-import WeatherApp from './WeatherApp';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(
@@ -9,5 +9,5 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <WeatherApp />
+  <App />
 );

@@ -7,22 +7,30 @@ header#header {
   height: 4rem;
   width: 100%;
 
-  background-color: rgba(20,20,20,0.2);
+  background-color: var(--steel-blue);
 
   input#searchBox {
-    transition: all 0.25s;
+    transition: all 0.3s;
     border: none;
     padding: 0.25rem 0.5rem;
     width: 90%;
     max-width: 18.75rem;
 
     border-radius: 0.25rem;
+    box-shadow: none;
 
     opacity: 0.35;
 
     &:focus {
       opacity: 1;
       padding: 0.6rem 0.85rem;
+      box-shadow: 3px 2px 15px var(--rhino);
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header#header {
+    background-color: var(--rhino);
   }
 }
