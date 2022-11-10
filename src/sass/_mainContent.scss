@@ -1,7 +1,10 @@
 main {
   width: 90%;
-  max-width: 980px;
+  max-width: 42.5rem;
   padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
 
   background-color: rgba(240,240,240,0.05);
 }

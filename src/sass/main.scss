@@ -25,6 +25,10 @@ body {
   background: linear-gradient(0deg, var(--chetwode-blue) 0%, var(--steel-blue) 100%);
 }
 
+strong {
+  font-weight: bold;
+}
+
 
 @media (prefers-color-scheme: dark) {
   * {

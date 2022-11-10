@@ -1,0 +1,65 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  min-height: 6rem;
+  border-radius: 0.35rem;
+
+  background-color: rgba(233,233,233,0.05);
+
+
+  .dayWrapper {
+    min-width: 8rem;
+
+    .day {
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 0.4rem;
+    }
+    .smallDate {
+      font-size: 0.75rem;
+    }
+  }
+
+  .weatherCodeWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    height: 100%;
+    margin-right: 0.5rem;
+
+    .icon{
+      position: relative;
+      height: 3rem;
+      width: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .smallDescription{
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+  }
+
+  .summaryWrapper {
+    margin-right: 0.5rem;
+
+    .min {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .chartWrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+
+}

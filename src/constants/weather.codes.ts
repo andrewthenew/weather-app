@@ -38,7 +38,10 @@ const {
   THUNDERSTORM, THUNDERSTORM_SLIGHT_HAIL, THUNDERSTORM_HEAVY_HAIL,
 } = WEATHER_CODE_VALUES;
 
-const WEATHER_CODES = {
+export interface WeatherCodesProps {
+  [idx: number]: string;
+}
+const WEATHER_CODES: WeatherCodesProps = {
   0: CLEAR,
   1: MAINLY_CLEAR,
   2: PARTLY_CLOUDY,
