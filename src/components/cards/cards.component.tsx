@@ -10,13 +10,13 @@ const Cards: FC<CardsProps> = ({ data }) => {
   console.log({ weData });
 
   return (
-    <>
+    <div id="cards">
       {Object.keys(weData).map((dateKey) => {
         return (
           <Card key={dateKey} dayData={weData[dateKey]} date={DateTime.fromFormat(dateKey, 'yyyyMMdd')} />
         )
       })}
-    </>
+    </div>
   );
 };
 
