@@ -11,6 +11,7 @@ import {
   LineElement,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import Icon from './icon.component';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -35,7 +36,7 @@ const Card: FC<CardProps> = ({ dayData, date }) => {
       </div>
 
       <div className="weatherCodeWrapper">
-        <div className="icon"></div>
+        <Icon code={code_most} />
         <div className="smallDescription">
           {getWeatherConditionDescription(code_most)}
         </div>
@@ -47,7 +48,6 @@ const Card: FC<CardProps> = ({ dayData, date }) => {
 
       <div className="chartWrapper">
         <Line
-          redraw
           data={{
             labels: Object.keys(dayData),
             datasets: [
