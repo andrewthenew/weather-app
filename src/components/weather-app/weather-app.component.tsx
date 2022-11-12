@@ -1,10 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import throttle from 'lodash.throttle';
 import { HourlyDataProps } from './weather-app.types';
-import Footer from '../components/footer/footer.component';
-import Search from '../components/search/search.component';
-import Cards from '../components/cards/cards.component';
-import { getWeatherData } from '../api/apis';
+import Footer from '../footer/footer.component';
+import Search from '../search/search.component';
+import Cards from '../cards/cards.component';
+import { getWeatherData } from '../../api/apis';
 
 
 const WeatherApp: FC = () => {

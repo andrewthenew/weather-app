@@ -1,4 +1,4 @@
-import { AggregatedDataProps } from '../weather-app/weather-app.types';
+import { AggregatedDataProps } from '../components/weather-app/weather-app.types';
 import { getDayTotals } from './analysis.utils';
 import { JACKET_TEMP, UMBRELLA_CODES } from '../constants/weather-codes.constants';
 

@@ -47,6 +47,7 @@ const Card: FC<CardProps> = ({ dayData, date }) => {
 
       <div className="chartWrapper">
         <Line
+          options={{ responsive: true }}
           data={{
             labels: Object.keys(dayData),
             datasets: [

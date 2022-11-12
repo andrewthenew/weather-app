@@ -1,4 +1,4 @@
-import { AggregatedDataProps, HourlyDataProps } from '../weather-app/weather-app.types';
+import { AggregatedDataProps, HourlyDataProps } from '../components/weather-app/weather-app.types';
 import { DateTime } from 'luxon';
 import { addLeadZeros } from './string.utils';
 import { WEATHER_CODES } from '../constants/weather-codes.constants';
