@@ -1,9 +1,10 @@
-@import "./helpers/reset";
+@import "helpers/reset";
 
-@import "./features/colors";
+@import "features/colors";
 @import "main";
 @import "header";
 @import "mainContent";
 @import "cards";
+@import "recommendations";
 @import "icons";
 @import "footer";

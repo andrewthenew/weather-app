@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   padding: 0.75rem;
   margin-bottom: 1.5rem;
@@ -18,10 +19,14 @@
       font-size: 1.15rem;
       font-weight: bold;
       text-align: left;
-      margin-bottom: 0.4rem;
     }
     .smallDate {
       font-size: 0.75rem;
+    }
+
+    /* 379 */
+    @media(max-width:23.688rem) {
+      min-width: auto;
     }
   }
 
@@ -66,6 +71,12 @@
 
     canvas {
       height: 100% !important;
+    }
+
+    /* 539 */
+    @media(max-width:33.688rem){
+      display: none;
+      visibility: hidden;
     }
   }
 

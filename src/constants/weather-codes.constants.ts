@@ -70,4 +70,10 @@ const WEATHER_CODES: WeatherCodesProps = {
   99: THUNDERSTORM_HEAVY_HAIL,
 }
 
-export { WEATHER_CODES }
+const UMBRELLA_CODES = [
+  51, 53, 55, 56, 57, 61, 63, 65, 80, 81, 82, 95, 96, 99
+];
+
+const JACKET_TEMP = 10;
+
+export { WEATHER_CODES, UMBRELLA_CODES, JACKET_TEMP }

@@ -3,23 +3,22 @@ import { HourProps } from '../weather-app/weather-app.types';
 
 export const getMostFrequentValueFrom = (array: number[]): number => {
   array.sort();
-  console.log({ array });
 
   const countsCollection: any = {};
   let count = 1;
 
-  array.forEach((n, idx) => {
+  array.forEach((weatherCode, idx) => {
     const nextVal = array[idx + 1];
 
     if (nextVal) {
-      if (n === nextVal) {
+      if (weatherCode === nextVal) {
         count++;
       } else {
-        countsCollection[n] = count;
+        countsCollection[weatherCode] = count;
         count = 1;
       }
     } else {
-      countsCollection[n] = count;
+      countsCollection[weatherCode] = count;
     }
   });
 
@@ -57,9 +56,9 @@ export const getDayTotals = (day: HourProps[]) => {
   });
 
   return {
-    temp_min: Math.min(...temps),
-    temp_max: Math.max(...temps),
-    code_most: getMostFrequentValueFrom(codes),
+    tempMin: Math.min(...temps),
+    tempMax: Math.max(...temps),
+    codeMost: getMostFrequentValueFrom(codes),
     temps,
   }
 };

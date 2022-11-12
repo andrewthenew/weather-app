@@ -29,12 +29,7 @@ const WeatherApp: FC = () => {
       </header>
       <main>
         {data && (
-          <>
-            <Cards data={data} />
-            <div id="info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam doloremque perferendis temporibus voluptas. Amet ex minus necessitatibus praesentium reiciendis. Aperiam assumenda ea facere iure nihil ratione repudiandae rerum veritatis!
-            </div>
-          </>
+          <Cards data={data} />
         )}
       </main>
       <Footer />

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { CardProps } from './card.types';
 import { getDayTotals } from '../../utils/analysis.utils';
-import { getWeatherConditionDescription } from '../../utils/weather.utils';
+import { getWeatherConditionString } from '../../utils/weather.utils';
 
 import {
   Chart as ChartJS,
@@ -21,8 +21,7 @@ ChartJS.register(
 
 
 const Card: FC<CardProps> = ({ dayData, date }) => {
-  console.log({ dayData, date });
-  const { temp_max, temp_min, code_most, temps } = getDayTotals(dayData);
+  const { tempMax, tempMin, codeMost, temps } = getDayTotals(dayData);
 
   const renderSmallDate = () => {
     return date && `${date.year}, ${date.monthShort} ${date.day}`;
@@ -36,14 +35,14 @@ const Card: FC<CardProps> = ({ dayData, date }) => {
       </div>
 
       <div className="weatherCodeWrapper">
-        <Icon code={code_most} />
+        <Icon code={codeMost} />
         <div className="smallDescription">
-          {getWeatherConditionDescription(code_most)}
+          {getWeatherConditionString(codeMost)}
         </div>
       </div>
 
       <div className="summaryWrapper">
-        <span className="min"><strong>{temp_min}°</strong></span> – <span className="max"><strong>{temp_max}°</strong></span>
+        <span className="min"><strong>{tempMin}°</strong></span> – <span className="max"><strong>{tempMax}°</strong></span>
       </div>
 
       <div className="chartWrapper">

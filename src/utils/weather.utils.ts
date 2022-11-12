@@ -1,7 +1,7 @@
 import { AggregatedDataProps, HourlyDataProps } from '../weather-app/weather-app.types';
 import { DateTime } from 'luxon';
 import { addLeadZeros } from './string.utils';
-import { WEATHER_CODES } from '../constants/weather.codes';
+import { WEATHER_CODES } from '../constants/weather-codes.constants';
 
 
 export const aggregateWeatherData = ({ temperature_2m, time, weathercode }: HourlyDataProps, limit?: number) => {
@@ -10,6 +10,14 @@ export const aggregateWeatherData = ({ temperature_2m, time, weathercode }: Hour
   const weatherCodeLen = weathercode.length;
 
   if (temperatureLen !== timeLen && temperatureLen !== weatherCodeLen) throw new Error('Data size inconsistent');
+
+  const days = timeLen / 24;
+  if (limit && limit > 0 && limit < days) {
+    const toRemove = (days - limit) * 24;
+    temperature_2m.splice(temperatureLen - toRemove, toRemove);
+    time.splice(timeLen - toRemove, toRemove);
+    weathercode.splice(weatherCodeLen - toRemove, toRemove);
+  }
 
   const { data } = time.reduce((
     acc: {
@@ -38,24 +46,9 @@ export const aggregateWeatherData = ({ temperature_2m, time, weathercode }: Hour
     data: {}
   });
 
-  if (limit) {
-    const keys = Object.keys(data);
-
-    if (limit < keys.length && limit > 0) {
-      const toRemove = keys.length - limit;
-      keys.splice(keys.length - toRemove, toRemove);
-    }
-    const dataLimited: AggregatedDataProps = {};
-    keys.forEach((k) => {
-      dataLimited[k] = data[k];
-    });
-
-    return dataLimited;
-  }
-
-  return data;
+  return { data };
 };
 
-export const getWeatherConditionDescription = (code: number): string => {
+export const getWeatherConditionString = (code: number): string => {
   return WEATHER_CODES[code];
 }

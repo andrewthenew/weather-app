@@ -1,0 +1,16 @@
+#recommendations {
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  div {
+    display: flex;
+    height: 3rem;
+    align-items: center;
+
+    .icon {
+      width: 3rem;
+      margin-right: 0.75rem;
+    }
+  }
+}
