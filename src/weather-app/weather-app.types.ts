@@ -5,17 +5,10 @@ export interface HourlyDataProps {
 }
 
 export interface HourProps {
-  [hour: number]: {
-    temp: number;
-    code: number;
-  }
+  temp: number;
+  code: number;
 }
 
 export interface AggregatedDataProps {
   [dateKey: string]: HourProps[];
-}
-
-
-export interface WeatherAppProps {
-  // todo
 }

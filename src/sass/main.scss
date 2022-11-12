@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  color: white;
+  line-height: 1.35;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 body {
@@ -23,6 +29,10 @@ body {
 
   background: var(--chetwode-blue);
   background: linear-gradient(0deg, var(--chetwode-blue) 0%, var(--steel-blue) 100%);
+}
+
+strong {
+  font-weight: bold;
 }
 
 

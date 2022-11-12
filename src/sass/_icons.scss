@@ -1,0 +1,92 @@
+.icon {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  mix-blend-mode: soft-light;
+  filter: invert(100%);
+
+  &.icon-0 {
+    background-image: url('../img/icons/0-clear.svg');
+  }
+  &.icon-1 {
+    background-image: url('../img/icons/1-mainly-clear.svg');
+  }
+  &.icon-2 {
+    background-image: url('../img/icons/2-partly-cloudy.svg');
+  }
+  &.icon-3 {
+    background-image: url('../img/icons/3-overcast.svg');
+  }
+  &.icon-45 {
+    background-image: url('../img/icons/45-fog.svg');
+  }
+  &.icon-48 {
+    background-image: url('../img/icons/48-fog-rime.svg');
+  }
+  &.icon-51 {
+    background-image: url('../img/icons/51-light-drizzle.svg');
+  }
+  &.icon-53 {
+    background-image: url('../img/icons/53-moderate-drizzle.svg');
+  }
+  &.icon-55 {
+    background-image: url('../img/icons/55-dense-drizzle.svg');
+  }
+  &.icon-56 {
+    background-image: url('../img/icons/56-drizzle-freezing-light.svg');
+  }
+  &.icon-57 {
+    background-image: url('../img/icons/57-drizzle-freezing-dense.svg');
+  }
+  &.icon-61 {
+    background-image: url('../img/icons/61-slight-rain.svg');
+  }
+  &.icon-63 {
+    background-image: url('../img/icons/63-moderate-rain.svg');
+  }
+  &.icon-65 {
+    background-image: url('../img/icons/65-heavy-rain.svg');
+  }
+  &.icon-71 {
+    background-image: url('../img/icons/71-slight-snow-fall.svg');
+  }
+  &.icon-73 {
+    background-image: url('../img/icons/73-moderate-snow-fall.svg');
+  }
+  &.icon-75 {
+    background-image: url('../img/icons/75-heavy-snow-fall.svg');
+  }
+  &.icon-77 {
+    background-image: url('../img/icons/77-snow-grains.svg');
+  }
+  &.icon-80 {
+    background-image: url('../img/icons/80-slight-rain-showers.svg');
+  }
+  &.icon-81 {
+    background-image: url('../img/icons/81-moderate-rain-showers.svg');
+  }
+  &.icon-82 {
+    background-image: url('../img/icons/82-violent-rain-showers.svg');
+  }
+  &.icon-85 {
+    background-image: url('../img/icons/85-slight-snow-showers.svg');
+  }
+  &.icon-86 {
+    background-image: url('../img/icons/86-heavy-snow-showers.svg');
+  }
+  &.icon-95 {
+    background-image: url('../img/icons/95-thunderstorm.svg');
+  }
+  &.icon-96 {
+    background-image: url('../img/icons/96-slight-hail.svg');
+  }
+  &.icon-99 {
+    background-image: url('../img/icons/99-heavy-hail.svg');
+  }
+  &.jacket {
+    background-image: url('../img/icons/jacket.svg');
+  }
+  &.umbrella {
+    background-image: url('../img/icons/umbrella.svg');
+  }
+}
