@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, queryByAttribute, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
 const getById = queryByAttribute.bind(null, 'id');
@@ -30,6 +31,20 @@ describe('WeatherApp', () => {
     const search = getById(view.container, 'searchBox');
     await waitFor(() => {
       expect(search).toBeInTheDocument();
+    });
+  });
+
+  it('should render cards wrapper after search', async () => {
+    const view = render(<App />);
+    const search = getById(view.container, 'searchBox');
+    const searchButton = getById(view.container, 'searchButton');
+
+    await waitFor(() => {
+      if (search) userEvent.type(search, 'Cairo');
+      if (searchButton) userEvent.click(searchButton);
+
+      const cards = getById(view.container, 'cards');
+      expect(cards).toBeInTheDocument();
     });
   });
 });
