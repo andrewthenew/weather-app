@@ -8,7 +8,7 @@ export const getWeatherLocation = async ({ location = 'london' }: { location: st
   if (!geoApiUrl) throw new Error('No geoApiUrl');
 
   const params = new URLSearchParams();
-  params.append('name', location);
+  params.append('name', location.toLowerCase());
   params.append('count', '1');
 
   return axios.get(geoApiUrl, { params })

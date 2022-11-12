@@ -12,8 +12,3 @@ export interface HourProps {
 export interface AggregatedDataProps {
   [dateKey: string]: HourProps[];
 }
-
-
-export interface WeatherAppProps {
-  // todo
-}

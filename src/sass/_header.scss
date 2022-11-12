@@ -6,16 +6,22 @@ header#header {
   top: 0;
   height: 4rem;
   width: 100%;
+  padding: 1rem;
 
   background-color: var(--steel-blue);
   z-index: 10;
+
+  /* 460 */
+  @media(max-width:28.75rem) {
+    justify-content: flex-start;
+  }
 
   input#searchBox {
     transition: all 0.3s;
     border: none;
     padding: 0.25rem 0.5rem;
     width: 90%;
-    max-width: 18.75rem;
+    max-width: 15rem;
 
     border-radius: 0.25rem;
     box-shadow: none;
@@ -27,6 +33,22 @@ header#header {
       padding: 0.6rem 0.85rem;
       box-shadow: 3px 2px 15px var(--rhino);
     }
+
+    /* 460 */
+    @media(max-width:28.75rem) {
+      max-width: 10rem;
+    }
+  }
+
+  #searchButton {
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+  }
+
+  #locationName {
+    margin-left: 1rem;
   }
 }
 
