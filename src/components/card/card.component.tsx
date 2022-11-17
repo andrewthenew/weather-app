@@ -28,7 +28,7 @@ const Card: FC<CardProps> = ({ dayData, date }) => {
   }
 
   return (
-    <div className="card">
+    <div className="card" role="article">
       <div className="dayWrapper">
         <div className="day">{date?.weekdayLong}</div>
         <div className="smallDate">{renderSmallDate()}</div>
