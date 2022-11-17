@@ -5,6 +5,7 @@ import Footer from '../footer/footer.component';
 import Search from '../search/search.component';
 import Cards from '../cards/cards.component';
 import { getWeatherData } from '../../api/apis';
+import { FETCH_DELAY } from '../../constants/app.constants';
 
 
 const WeatherApp: FC = () => {
@@ -20,7 +21,7 @@ const WeatherApp: FC = () => {
         setLocationName(searchRef.current.value);
       }
     }
-  }, 3500); // delay/throttle api fetches
+  }, FETCH_DELAY); // delay/throttle api fetches
 
   useEffect(() => {
     // fetchData(); // todo: probably with CURRENT location?
